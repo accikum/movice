@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/full_screen1"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#98989898"
+        android:id="@+id/full_screen"
+        android:layout_height="250dp">
+
+        <com.lcw.movice.MyVideoView
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="#00000000"
+            android:id="@+id/video" />
+
+        <RelativeLayout
+            android:id="@+id/video_player_control"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#8d72b0e1"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="||"
+                android:textColor="#ffffff"
+                android:id="@+id/video_pause"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp" />
+
+            <SeekBar
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/video_seekbar"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/video_pause"
+                android:layout_toEndOf="@+id/video_pause"
+                android:max="100"
+                android:progress="0"
+                android:secondaryProgress="0"
+                android:indeterminate="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="[ U ]"
+                android:textColor="#ffffff"
+                android:id="@+id/full_screen_play"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:id="@+id/video_prepare"
+            android:paddingTop="50dp"
+            android:background="#8d72b0e1"
+            android:scaleType="center"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@android:drawable/ic_media_play" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_title"
+            android:background="@drawable/video_title"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="视频的标题"
+                android:textColor="#64000000"
+                android:padding="5dp"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ff72b0e1"
+        android:layout_height="40dp"
+        android:layout_below="@+id/full_screen"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_fav"
+            android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="收藏视频"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/video_fav"
+            android:layout_toEndOf="@+id/video_fav"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_share"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+
+    </RelativeLayout>
+</RelativeLayout>
