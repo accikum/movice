@@ -23,7 +23,7 @@ public class MainMyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(new MySurfaceView(this));
+//        setContentView(new MySurfaceView(this));//
 
         setContentView(R.layout.activity_main_my);
         video_list = (VideoListView) findViewById(R.id.video_list);
