@@ -23,7 +23,7 @@ public class MainMyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(new MySurfaceView(this));//
+//        setContentView(new MySurfaceView(this));
 
         setContentView(R.layout.activity_main_my);
         video_list = (VideoListView) findViewById(R.id.video_list);
@@ -71,7 +71,6 @@ public class MainMyActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Toast.makeText(getApplicationContext(),"result "+ data.getIntExtra("long",300),Toast.LENGTH_SHORT).show();
-
     }
 }
 
