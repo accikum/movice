@@ -122,9 +122,7 @@ public class VideoListView extends ListView implements AdapterView.OnItemClickLi
             }
         }
     }
-
 }
-
 
 class MediaAdapter extends BaseAdapter {
 
@@ -158,19 +156,9 @@ class MediaAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;
         if (convertView == null) {
-            holder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.video_item, null);
-            holder.video_title = (RelativeLayout) convertView.findViewById(R.id.video_title);
-            holder.full_screen_play = (TextView) convertView.findViewById(R.id.full_screen_play);
-            holder.video_prepare = (ImageView) convertView.findViewById(R.id.video_prepare);
-
-            holder.video_seekbar = (SeekBar) convertView.findViewById(R.id.video_seekbar);
-            holder.video = (MyVideoView) convertView.findViewById(R.id.video);
+            holder = new ViewHolder(convertView);
             holder.video.setVideoPath(path2);
-            holder.video_player_control = (RelativeLayout) convertView.findViewById(R.id.video_player_control);
-            holder.video_pause = (TextView) convertView.findViewById(R.id.video_pause);
-            holder.video_fav = (ImageView) convertView.findViewById(R.id.video_fav);
-            holder.video_share = (ImageView) convertView.findViewById(R.id.video_share);
             //TODO
             //holder.video.setHandler(handler);
             holder.video.setSeekBar(holder.video_seekbar);
@@ -193,7 +181,6 @@ class MediaAdapter extends BaseAdapter {
                 }
             });
 
-
             holder.video_pause.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -206,7 +193,6 @@ class MediaAdapter extends BaseAdapter {
                     }
                 }
             });
-
 
             holder.video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -224,6 +210,19 @@ class MediaAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
+        public ViewHolder(View convertView){
+            video_title = (RelativeLayout) convertView.findViewById(R.id.video_title);
+            full_screen_play = (TextView) convertView.findViewById(R.id.full_screen_play);
+            video_prepare = (ImageView) convertView.findViewById(R.id.video_prepare);
+
+            video_seekbar = (SeekBar) convertView.findViewById(R.id.video_seekbar);
+            video = (MyVideoView) convertView.findViewById(R.id.video);
+            video_player_control = (RelativeLayout) convertView.findViewById(R.id.video_player_control);
+            video_pause = (TextView) convertView.findViewById(R.id.video_pause);
+            video_fav = (ImageView) convertView.findViewById(R.id.video_fav);
+            video_share = (ImageView) convertView.findViewById(R.id.video_share);
+
+        };
         MyVideoView video;
         RelativeLayout video_title;
         RelativeLayout video_player_control;

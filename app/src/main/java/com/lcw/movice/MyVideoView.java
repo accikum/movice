@@ -65,7 +65,7 @@ public class MyVideoView extends VideoView implements MediaPlayer.OnPreparedList
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int curr = seekBar.getProgress();
-                seekTo((int) (duration * (curr / 100.0)));//跳转到指定地方播放
+                seekTo((int) (duration * (curr / (seekBar.getMax()*1.0))));//跳转到指定地方播放
                 start();
             }
         });
@@ -96,7 +96,7 @@ public class MyVideoView extends VideoView implements MediaPlayer.OnPreparedList
 
                 if (seekBar != null) {
                     curr = mp.getCurrentPosition();
-                    seekBar.setProgress((int) (100.0 * (curr / (duration * 1.0))));
+                    seekBar.setProgress((int) ((seekBar.getMax()*1.0) * (curr / (duration * 1.0))));
                     seekBar.setSecondaryProgress(percent);
                 }
             }

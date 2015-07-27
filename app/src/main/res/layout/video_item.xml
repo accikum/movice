@@ -24,7 +24,7 @@
             android:id="@+id/video_player_control"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#8d72b0e1"
+            android:background="#ffffff"
             android:visibility="gone"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="||"
-                android:textColor="#ffffff"
+                android:textColor="#ff79acff"
                 android:id="@+id/video_pause"
                 android:gravity="center"
                 android:layout_centerVertical="true"
@@ -51,7 +51,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/video_pause"
                 android:layout_toEndOf="@+id/video_pause"
-                android:max="100"
+                android:max="500"
                 android:progress="0"
                 android:secondaryProgress="0"
                 android:indeterminate="false" />
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="[ U ]"
-                android:textColor="#ffffff"
+                android:textColor="#ff79acff"
                 android:id="@+id/full_screen_play"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
@@ -73,7 +73,7 @@
             android:layout_height="250dp"
             android:id="@+id/video_prepare"
             android:paddingTop="50dp"
-            android:background="#8d72b0e1"
+            android:background="#83000000"
             android:scaleType="center"
             android:visibility="visible"
             android:layout_alignParentTop="true"
@@ -93,16 +93,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="视频的标题"
-                android:textColor="#64000000"
+                android:textColor="#ffffff"
                 android:padding="5dp"
-                android:textSize="25sp" />
+                android:textSize="15sp" />
         </RelativeLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:background="#ff72b0e1"
+        android:background="#9a9c9c9c"
         android:layout_height="40dp"
         android:layout_below="@+id/full_screen"
         android:layout_marginBottom="8dp"
