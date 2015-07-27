@@ -33,7 +33,7 @@ build/
 *.iml
 *.ipr
 *.iws
-/.idea/
+.idea/
 
 # Mac system files
 .DS_Store
